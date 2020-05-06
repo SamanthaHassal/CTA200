@@ -1,0 +1,170 @@
+  204  ls -la
+  205  ls
+  206  echo 'Begin license text.
+  207  Copyright <YEAR> <COPYRIGHT HOLDER>
+  208  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+  209  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+  210  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  211  End license text.' > LICENSE.txt
+  212  ls
+  213  gedit LICENSE.txt 
+  214  ls -la
+  215  history
+  216  cd ~/repos
+  217  mkdir assignment_1_git_folder
+  218  cd assignment_1_git_folder/
+  219  git init --bare
+  220  cd /home/student14/my_stuff/
+  221  cd /home/student14/Desktop/my_stuff/CTA200H-master/
+  222  ls -la
+  223  cd assignment1_2020/
+  224  ls
+  225  git init
+  226  echo "*.o" > .gitignore
+  227  git add average.c average.h 
+  228  git commit
+  229  cd /Desktop/
+  230  ls
+  231  cd Desktop
+  232  echo 'Begin license text.
+  233  Copyright <YEAR> <COPYRIGHT HOLDER>
+  234  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+  235  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+  236  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  237  End license text.' > LICENSE.txt
+  238  ls
+  239  cd /home/student14
+  240  ls
+  241  cd ~
+  242  ls
+  243  cd repos
+  244  ls -la
+  245  cd assignment_1_git_folder/
+  246  ls -la
+  247  cd /home/student14/Desktop/my_stuff/CTA200H-master/
+  248  ls -la
+  249  cd assignment1_2020/
+  250  ls -la
+  251  git clone https://github.com/SamanthaHassal/CTA200.git
+  252  ls -la
+  253  cd CTA200/
+  254  ls -la
+  255  git add ~/Desktop/my_stuff/CTA200H-master/assignment1_2020/average.h
+  256  cd ~/Desktop/my_stuff/CTA200H-master/assignment1_2020/
+  257  ls -la
+  258  git add average.c main.c average.h
+  259  git commit -m "move these files to the git"
+  260  git push
+  261  git push .git
+  262  cd .git
+  263  ls -la
+  264  pwd
+  265  echo COMMIT_EDITMSG 
+  266  git log
+  267  cd ~
+  268  cd repos/
+  269  ls -la
+  270  history
+  271  pwd
+  272  cd Desktop/my_stuff/CTA200H-master/assignment1_2020/.git
+  273  ls -la
+  274  cd objects/
+  275  ls
+  276  cd ..
+  277  cd ~/repos/
+  278  git clone https://github.com/SamanthaHassal/CTA200.git
+  279  ls -la
+  280  cd CTA200
+  281  ls -la
+  282  gedit LICENSE.txt 
+  283  cp -av /home/student14/Desktop/my_stuff/CTA200H-master/assignment1_2020/ /home/student14/repos/CTA200/
+  284  ls -la
+  285  cp -av assignment1_2020/average.h average.h
+  286  ls -la
+  287  pwd
+  288  cd assignment1_2020/
+  289  ls -la
+  290  cd CTA200/
+  291  ls
+  292  ls -la
+  293  cd ..
+  294  ls -la
+  295  ls
+  296  cd ~/Desktop/my_stuff/
+  297  cd CTA200
+  298  cd CTA200H-master/
+  299  cd assignment1_2020/
+  300  ls -la
+  301  cd CTA200/
+  302  ls -la
+  303  cd ~/repos
+  304  ls -la
+  305  cd gauss2d.git/
+  306  ls -la
+  307  cp -av /home/cta200/Research/gauss2d /mnt/scratch-lustre/$USER/gauss2d
+  308  cp -av /home/cta200/Research/gauss2d/ /home/student14/Desktop/
+  309  cd ~/repos/
+  310  ls -la
+  311  cd CTA200/
+  312  ls -la
+  313  echo 'paste here' > Makefile
+  314  gedit Makefile 
+  315  cd ~/Desktop/gauss2d/
+  316  ls -la
+  317  gedit Makefile 
+  318  cd ~/repos/
+  319  cd CTA200/
+  320  ls -la
+  321  gedit Makefile
+  322  module avail
+  323  module load gcc/5.4.0
+  324  g++ average.c -o ave
+  325  cd ~
+  326  ls
+  327  cd repos
+  328  ls -la
+  329  cd CTA200/
+  330  ls -la
+  331  gedit Makefile
+  332  ls -la
+  333  gedit Makefile~
+  334  rm Makefile~
+  335  ls -la
+  336  vim Makefile 
+  337  cd ~/repos/CTA200/
+  338  ls -la
+  339  g++ main.c average.c
+  340  ls -la
+  341  ./a.out 
+  342  make
+  343  ls
+  344  gedit Makefile 
+  345  make
+  346  ls
+  347  ./output 
+  348  git add average.c average.h main.c Makefile
+  349  git commit -m "Adding C files. It gives you the average"
+  350  git remote set-url origin "https://SamanthaHassal@github.com/SamanthaHassal/CTA200.git
+  351  git pus
+  352  git push
+  353  git remote -v
+  354  cat history | history.txt
+  355  history
+  356  ls -la
+  357  pwd
+  358  cd Desktop/
+  359  ls -la
+  360  cd ~/repos/
+  361  cd CTA200/
+  362  ls -la
+  363  git add average.h average.c main.c Makefile
+  364  git commit -m "adding files for C code"
+  365  git push
+  366  pwd
+  367  cd ~/repos
+  368  ls -la
+  369  cd CTA200/
+  370  history > history.txt
+  371  ls
+  372  gedit history.txt 
+  373  history | tail -170 > history.txt
