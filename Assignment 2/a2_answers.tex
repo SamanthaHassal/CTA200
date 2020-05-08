@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.5em}
+
+\title{Samantha Hassal - CTA200 2020 Assignment 2 Responses}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{IMPORTANT: This file does not contain figures. All figures are in the file FiguresFile.pdf (the figures file)}
+\section*{Question 1 - Response}
+\textbf{Methods:} For this coding exercise, I generated the arrays that represented  $-2 < x < 2$ and $-2 < y < 2$ first. Next, I created a function that took the x and y arrays and mapped them onto the real and imaginary axes, iterated through the equation $z_{i + 1} = z_i^2 + c$ a given number of times (in this case, 100 times) with an initial condition $z_0 = 0$, and used a numeric threshold to seperate bounded values from unbounded ones (bounded items had a modulus less than the threshold, unbounded ones had a modulus greater.) I then plotted the results. To zoom in on areas of the graph, I plotted subsets on the axes (eg, plotting only half of the arrays)
+
+Creating the colourized plot of the set required me to create a megafunction that handled both data generation and plotting. Not only does this megafunction iterate through the equation a given number of times, but it also keeps track of the value at which the sequence diverges. If it diverges sooner, it gives it a lighter colour than if it diverges later. 
+
+\textbf{Analysis:} Consider all points in the complex plane $c = x + iy$. If we iterate the equation $z_{i + 1} = z_i^2 + c$, some $z_i$'s will remain bounded in absolute value while others will run off to infinity. The set of bounded points is known as the Mandelbrot set. (Figure 1 in the figures file)
+
+The Mandelbrot set is important because it exhibits a property known as self-similarity. In other words, the pattern repeats itself at smaller scales.(Figures 2 and 3 in the figures file)
+
+We can even colour points according to how soon the sequence diverges to infinity. The darkest colours represents points that, after a given number iterations, have yet to diverge to infinity (Figure 4 in the figures file)
+
+\section*{Question 2 - Response}
+\textbf{Methods:} The SIR model is a simple mathematical model of disease spread in a population that makes use of the following differential equations:
+
+\begin{align}
+    \frac{dS}{dt} &= -\frac{\beta S I}{N},\\
+    \frac{dI}{dt} &= \frac{\beta S I}{N} - \gamma I,\\
+    \frac{dR}{dt} &= \gamma I
+\end{align}
+
+where $S(t)$ represents those that are susceptible (people who have not yet been  infected), $I(t)$ represents the number of infected people, $R(t)$ represents people that have recovered and gained immunity. The first step to solving this problem was to start with the following initial conditions:
+
+\begin{itemize}
+    \item $I(0) = 1$ 
+    \item $S(0)=999$
+    \item $R(0) = 0$
+    \item $N = 1000$
+\end{itemize}
+
+I then created a time array that represented $0<t<200$. After that, I created two functions: one that generated the differential equations and another that solved the equations and plotted the curves for different values of beta and gamma.
+
+\textbf{Analysis:} The goal of this task was to create plots of disease progression using 3 to 4 different values for the contact rate, beta, and mean recovery rate, gamma. 
+
+I chose beta and gamma parameters that represent the following cases:
+
+\begin{itemize}
+    \item the contact rate is greater than the recovery rate (Figure 5 in the figures file)
+    \item the contact rate is less than the recovery rate (Figure 6 in the figures file)
+    \item the contact rate is and the recovery rate are equal (Figure 7 in the figures file)
+\end{itemize}
+
+In the cases where the contact rate is the same as or less than the recovery rate, an outbreak never takes hold. It's only when the contact rate is greater than the recovery rate that an outbreak happens. 
+
+
+\end{document}
+
